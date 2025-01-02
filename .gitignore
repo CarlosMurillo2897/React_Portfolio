@@ -29,3 +29,6 @@ frontend_react/node_modules/
 # Dotenv and similar local-only files
 *.local
 backend_sanity/frontend_react/node_modules/
+
+# Assets (will change).
+frontend_react/src/assets/
