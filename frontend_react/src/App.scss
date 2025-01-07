@@ -1,14 +1,14 @@
 .app {
-    background-color: var(--primary-color);
+    @apply tw-bg-primary;
     font-family: var(--font-base);
   }
   
   .app__whitebg {
-    background-color: var(--white-color);
+    @apply tw-bg-white;
   }
   
   .app__primarybg {
-    background-color: var(--primary-color);
+    @apply tw-bg-primary;
   }
   
   .app__container {
@@ -47,7 +47,7 @@
   
     p {
       text-transform: uppercase;
-      color: var(--black-color);
+      @apply tw-text-black;
     }
   }
   
@@ -55,17 +55,17 @@
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    @apply tw-text-black;
     text-transform: capitalize;
-  
+    
     span {
-      color: var(--secondary-color);
+      @apply tw-text-secondary;
     }
-  
+    
     @media screen and (min-width: 2000px) {
       font-size: 4rem;
     }
-  
+    
     @media screen and (max-width: 450px) {
       font-size: 2rem;
     }
@@ -74,9 +74,9 @@
   .p-text {
     font-size: 0.8rem;
     text-align: left;
-    color: var(--gray-color);
+    @apply tw-text-gray;
     line-height: 1.5;
-  
+    
     @media screen and (min-width: 2000px) {
       font-size: 1.75rem;
     }
@@ -85,7 +85,7 @@
   .bold-text {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--black-color);
+    @apply tw-text-black;
     text-align: left;
   
     @media screen and (min-width: 2000px) {
@@ -109,9 +109,10 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: var(--white-color);
+      @apply tw-bg-white;
       margin: 0.25rem 0;
-      border: 1px solid var(--lightGray-color);
+      border: 1px solid;
+      @apply tw-border-light-gray;
   
       display: flex;
       justify-content: center;
@@ -122,15 +123,15 @@
       svg {
         width: 15px;
         height: 15px;
-        color: var(--gray-color);
+        @apply tw-text-gray;
       }
   
       &:hover {
-        background-color: var(--secondary-color);
-        border-color: var(--secondary-color);
+        @apply tw-bg-secondary;
+        @apply tw-border-secondary;
   
         svg {
-          color: var(--white-color);
+          @apply tw-text-white;
         }
       }
   
@@ -166,7 +167,7 @@
       transition: background-color 0.2s ease-in-out;
   
       &:hover {
-        background-color: var(--secondary-color);
+        @apply tw-bg-secondary;
       }
   
       @media screen and (min-width: 2000px) {
