@@ -42,7 +42,7 @@ const Header = ()  => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
                 children={{ duration: 0.5 }}
-                className="app__header-img tw-flex-1 tw-h-full tw-flex tw-justify-end tw-items-end tw-relative"
+                className="app__header-img tw-flex-1 tw-h-full tw-flex tw-justify-end tw-items-end tw-relative max-xl:tw-my-8"
             >
                 <img src={images.profile} alt="profile_bg" className="tw-w-full tw-object-contain tw-z-[1]" />
                 <motion.img
@@ -56,10 +56,10 @@ const Header = ()  => {
             </motion.div>
             <motion.div
                 variants={ scaleVariants }
-                className="app__header-circles tw-flex-[0.7] tw-flex tw-flex-col tw-justify-evenly tw-items-start tw-h-full"
+                className="app__header-circles tw-flex-[0.7] tw-flex tw-flex-col tw-justify-evenly tw-items-start tw-h-full max-xl:tw-w-full max-xl:tw-flex-row max-xl:tw-flex-wrap max-xl:tw-ml-0"
             >
                 {techs.map((circle, index) => (
-                    <div className="circle-cmp app__flex tw-w-[100px] tw-h-[100px] tw-rounded-full tw-bg-white" key={`circle-${index}`}>
+                    <div className="circle-cmp app__flex tw-w-[100px] tw-h-[100px] tw-rounded-full tw-bg-white max-xl:tw-m-4" key={`circle-${index}`}>
                         <img className="tw-w-3/5 tw-h-3/5" src={circle} alt="circle" />
                     </div>
                 ))}

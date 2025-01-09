@@ -4,22 +4,15 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.app__navbar-links {    
-    li:hover {
-        div {
-            @apply tw-bg-secondary;
-        }
-    }
+.app__navbar-links > li:hover > div {
+    @apply tw-bg-secondary;
 }
 
-.app__navbar-menu {
+.app__navbar-menu > div {
+    background: url('../../assets/bgWhite.png');
+    @apply tw-bg-white;
+    background-size: cover;
+    background-repeat: repeat;
 
-    div {
-        background: url('../../assets/bgWhite.png');
-        @apply tw-bg-white;
-        background-size: cover;
-        background-repeat: repeat;
-
-        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
-    }
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 }
