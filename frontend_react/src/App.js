@@ -7,7 +7,7 @@ import './App.scss'
 
 const App = ()  => {
     return (
-        <div className="app">
+        <div className="app tw-bg-primary">
             <Navbar />
             <Header />
             <About />

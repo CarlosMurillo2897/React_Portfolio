@@ -30,5 +30,5 @@ frontend_react/node_modules/
 *.local
 backend_sanity/frontend_react/node_modules/
 
-# Assets (will change).
+# TODO: Include Assets (will change).
 frontend_react/src/assets/

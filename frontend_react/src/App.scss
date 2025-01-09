@@ -1,14 +1,6 @@
 .app {
-    @apply tw-bg-primary;
+    // TODO: Move into TW config.
     font-family: var(--font-base);
-  }
-  
-  .app__whitebg {
-    @apply tw-bg-white;
-  }
-  
-  .app__primarybg {
-    @apply tw-bg-primary;
   }
   
   .app__container {
