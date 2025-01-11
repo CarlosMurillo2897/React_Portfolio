@@ -32,3 +32,6 @@ backend_sanity/frontend_react/node_modules/
 
 # TODO: Include Assets (will change).
 frontend_react/src/assets/
+
+# Ignore the .env file
+.env

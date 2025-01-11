@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
-
 import './About.scss';
 
-const abouts = [
-    { title: 'Full Stack', description: 'It\'s the position I enjoy the most.', imageUrl: images.about01 }, 
-    { title: 'Web Developer', description: 'I work with stylings, Components and Accessibility.', imageUrl: images.about02 },
-    { title: 'Backend Developer', description: 'Most of the time I\'ve been working using NET', imageUrl: images.about03 },
-    { title: 'RPA Developer', description: 'I\'ve experience working with UiPath and BluePrism.', imageUrl: images.about04 },
-];
+import { urlFor, client } from '../../client';
 
 const About = ()  => {
+    const [abouts, setAbouts] = useState([]);
+
+    useEffect(_ => {
+        const query = '*[_type == "abouts"]';
+        client.fetch(query).then(data => setAbouts(data));
+    }, []);
+    
+
     return (
         <>
             <h2 className="head-text">
@@ -33,7 +34,7 @@ const About = ()  => {
                     >
                          <img 
                             className="tw-w-full tw-h-44 tw-rounded-2xl tw-object-cover 2xl:tw-h-80" 
-                            src={about.imageUrl} 
+                            src={urlFor(about.imgUrl)} 
                             alt={about.title} 
                          />
                         <h2 className="bold-text tw-mt-5">{about.title}</h2>
