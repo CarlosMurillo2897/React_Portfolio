@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 
+import { AppWrap } from '../../wrapper';
 import './Header.scss';
 
 const scaleVariants = {
@@ -15,7 +16,7 @@ const techs = [ images.flutter, images.redux, images.sass ];
 
 const Header = ()  => {
     return (
-        <div id="home" className="app__header tw-flex-1 tw-w-full tw-h-full tw-flex-col xl:tw-flex-row tw-pt-24 2xl:tw-pt-32 sm:tw-pb-0 tw-pb-8 sm:tw-px-8 tw-px-4 app__flex">
+        <div className="app__header tw-flex-1 tw-w-full tw-h-full tw-flex-col xl:tw-flex-row tw-pt-24 2xl:tw-pt-32 sm:tw-pb-0 tw-pb-8 sm:tw-px-8 tw-px-4 app__flex">
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -68,4 +69,4 @@ const Header = ()  => {
     );
 }
 
-export default Header;
+export default AppWrap(Header, 'home');
