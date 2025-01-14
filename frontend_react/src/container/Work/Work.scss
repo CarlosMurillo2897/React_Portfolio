@@ -1,0 +1,21 @@
+.app__works {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .app__work-filter > .app__work-filter-item {
+    transition: all 0.3s ease;
+  }
+  
+  .app__work-portfolio > .app__work-item {
+    transition: all 0.3s ease;
+  }
+
+  .app__work-hover {
+    transition: all 0.3s ease;
+  
+    div {
+        transition: all 0.3s ease;
+    }
+  }
