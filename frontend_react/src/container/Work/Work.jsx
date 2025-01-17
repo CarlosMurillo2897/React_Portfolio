@@ -3,7 +3,7 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
 import { motion } from 'framer-motion';
 
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
 
@@ -64,6 +64,7 @@ const Work = ()  => {
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
                 className="app__work-portfolio tw-flex tw-flex-wrap tw-justify-center tw-items-center"
             >
+                {/* TODO: Create Carrousel or slider to display several works. */}
                 {filterWork.map((work, index) => 
                     <div 
                         className="app__work-item app__flex tw-w-[270px] tw-flex-col tw-m-8 tw-p-4 tw-rounded-lg tw-bg-white tw-text-black tw-cursor-pointer hover:tw-shadow-[0_0_25px_rgba(0,0,0,0.2)] 2xl:tw-w-[470px] 2xl:tw-p-5 2xl:tw-rounded-xl max-sm:tw-w-full max-sm:tw-m-4" 
@@ -81,6 +82,7 @@ const Work = ()  => {
                                         href={ index === 0 ? work.projectLink : work.codeLink } 
                                         target="_blank" 
                                         rel="noreferrer"
+                                        key={Icon + index}
                                         className="app__work-hover-item app__flex"
                                     >
                                         <motion.div
@@ -111,4 +113,7 @@ const Work = ()  => {
     );
 }
 
-export default AppWrap(Work, 'work');
+export default AppWrap(
+    MotionWrap(Work, 'app__work tw-flex-1 tw-w-full tw-flex-col'), 
+    'work'
+);
