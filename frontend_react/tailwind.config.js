@@ -6,6 +6,7 @@ module.exports = {
   ],
   prefix: 'tw-',
   theme: {
+    // TODO: Create media queries based on common media defined on app, i.e.: 2000px.
     colors: {
       'primary': '#edf2f8',
       'secondary': '#313bac',

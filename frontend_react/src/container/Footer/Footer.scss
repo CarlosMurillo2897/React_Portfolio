@@ -1,0 +1,36 @@
+.app__footer-card {
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+        box-shadow: 0 0 25px #fef4f5;
+    }
+}
+
+.app__footer-form > div {
+    width: 100%;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    @apply tw-bg-primary;
+    
+    transition: all 0.3s ease-in-out;
+    
+    input, textarea {
+        width: 100%;
+        padding: 0.95rem;
+        border: none;
+        border-radius: 7px;
+        @apply tw-bg-primary;
+        @apply tw-text-secondary;
+        outline: none;
+    }
+    
+    textarea {
+        height: 170px;
+    }
+    
+    &:hover {
+        @apply tw-shadow-[0_0_25px];
+        @apply tw-shadow-primary !important;
+    }
+}

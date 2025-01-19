@@ -6,7 +6,7 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 
-const applyBgColor = bgColor => bgColor === undefined ? 'tw-bg-primary' : `tw-bg-[${bgColor}]`;
+const applyBgColor = bgColor => bgColor === undefined ? '' : `!tw-bg-[${bgColor}]`;
 
 const Skills = ()  => {
 
@@ -37,7 +37,7 @@ const Skills = ()  => {
                             className="app__skills-item app__flex tw-flex-col tw-text-center tw-m-4 2xl:tw-my-4 2xl:tw-mx-8"
                             key={skill.name}
                         >
-                            <div className={`app__flex tw-w-[70px] sm:tw-w-[90px] 2xl:tw-w-[150px] tw-h-[70px] sm:tw-h-[90px] 2xl:tw-h-[150px] tw-rounded-full ${applyBgColor(skill.bgColor)}`}>
+                            <div className={`app__flex tw-w-[70px] sm:tw-w-[90px] 2xl:tw-w-[150px] tw-h-[70px] sm:tw-h-[90px] 2xl:tw-h-[150px] tw-rounded-full tw-bg-primary ${applyBgColor(skill.bgColor)}`}>
                                 {/* TODO: Replace images with Icons. */}
                                 <img src={urlFor(skill.icon).url()} alt={skill.name} className="tw-w-3/6 tw-h-3/6" />
                             </div>
@@ -71,8 +71,8 @@ const Skills = ()  => {
                                         <Tooltip
                                             id={work.name}
                                             effect="solid"
-                                            style={{ 'max-width': '300px', 'box-shadow': '0 0 25px rgba(0,0,0,0.1)', 'padding': '1rem', 'text-align': 'center', 'line-height': '1.5' }}
-                                            border={ 5 }
+                                            style={{ maxWidth: '300px', boxShadow: '0 0 25px rgba(0,0,0,0.1)', 'padding': '1rem', textAlign: 'center', lineHeight: '1.5' }}
+                                            border={ '5px' }
                                             opacity={ 1 }
                                             arrowColor="#fff"
                                             className="skills-tooltip !tw-bg-white !tw-text-gray 2xl:!tw-text-[1.75rem] 2xl:!tw-max-w-[500px]"
