@@ -1,0 +1,40 @@
+.app__testimonial-item {
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.app__testimonial-btns {
+    div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @apply tw-bg-white;
+
+        margin: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            @apply tw-text-secondary;
+        }
+
+        &:hover {
+            @apply tw-bg-secondary;
+            
+            svg {
+                @apply tw-text-white;
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 100px;
+            height: 100px;
+
+            svg {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}

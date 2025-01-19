@@ -6,7 +6,7 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 
-const applyBgColor = bgColor => bgColor === undefined ? 'tw-bg-primary' : `!tw-bg-[${bgColor}]`;
+const applyBgColor = bgColor => bgColor === undefined ? 'tw-bg-primary' : `tw-bg-[${bgColor}]`;
 
 const Skills = ()  => {
 
@@ -23,7 +23,7 @@ const Skills = ()  => {
           client.fetch(skillsQuery).then(data => {
             setSkills(data);
           });
-        }, [])
+        }, []);
 
     return (
         <>
