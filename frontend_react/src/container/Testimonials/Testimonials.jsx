@@ -42,6 +42,7 @@ const Testimonials = ()  => {
                     </div>
                 </div>
             </div>
+            {/* TODO: Adding pagination can improve performance. */}
             <div className="app__testimonial-btns app__flex tw-flex-row tw-mt-4">
                 <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
                     <HiChevronLeft />

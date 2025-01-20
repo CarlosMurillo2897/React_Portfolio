@@ -17,9 +17,9 @@ const Navbar = ()  => {
     return (
         <nav className="app__navbar tw-w-full tw-flex tw-justify-between tw-items-center tw-py-4 tw-px-8 tw-backdrop-blur-sm tw-fixed tw-z-10">
             <div className="tw-flex tw-justify-start tw-items-center">
-                <img className="tw-w-[90px] tw-h-[20px] 2xl:tw-w-[180px] 2xl:tw-h-[40px]" src={images.logo} alt="logo" />
+                <img className="tw-w-[90px] tw-h-[20px] min-[2000px]:tw-w-[180px] min-[2000px]:tw-h-[40px]" src={images.logo} alt="logo" />
             </div>
-            <ul className="app__navbar-links tw-flex-1 tw-justify-center tw-items-center md:tw-flex tw-hidden">
+            <ul className="app__navbar-links tw-flex-1 tw-justify-center tw-items-center tw-flex max-[900px]:tw-hidden">
                 {
                 links.map((item) => (
                     <li key={`link-${item}`} className="app__flex p-text tw-mx-4 tw-cursor-pointer tw-flex-col">
@@ -30,7 +30,7 @@ const Navbar = ()  => {
                 ))}
             </ul>
 
-            <div className="app__navbar-menu tw-w-[35px] tw-h-[35px] tw-rounded-full tw-relative md:tw-hidden tw-flex tw-justify-center tw-items-center tw-bg-secondary">
+            <div className="app__navbar-menu tw-w-[35px] tw-h-[35px] tw-rounded-full tw-relative min-[900px]:tw-hidden tw-flex tw-justify-center tw-items-center tw-bg-secondary">
                 <HiMenuAlt4 onClick={ () => setToggle(true) } className="tw-h-[70%] tw-w-[70%] tw-text-white" />
                 
                 {toggle && (

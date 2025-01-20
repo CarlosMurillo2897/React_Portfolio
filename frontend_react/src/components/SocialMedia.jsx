@@ -5,7 +5,7 @@ import { FaUpwork } from 'react-icons/fa6';
 
 const SocialMedia =  () => {
     return (
-        <div className="app__social tw-hidden sm:tw-flex tw-justify-end tw-items-center tw-flex-col tw-p-4">
+        <div className="app__social max-[500px]:tw-hidden tw-flex tw-justify-end tw-items-center tw-flex-col tw-p-4">
             <a href="https://github.com/CarlosMurillo2897/">
                 <BsGithub />
             </a>

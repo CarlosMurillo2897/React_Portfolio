@@ -30,10 +30,10 @@ const About = ()  => {
                         whileHover={{ scale: 1.1 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, type: 'tween' }}
-                        className="app__profile-item tw-w-[190px] tw-flex tw-justify-start tw-items-start tw-flex-col tw-m-8 2xl:tw-w-[370px] 2xl:tw-mx-16 2xl:tw-my-8"
+                        className="app__profile-item tw-w-[190px] tw-flex tw-justify-start tw-items-start tw-flex-col tw-m-8 min-[2000px]:tw-w-[370px] min-[2000px]:tw-mx-16 min-[2000px]:tw-my-8"
                     >
                          <img 
-                            className="tw-w-full tw-h-[170px] tw-rounded-2xl tw-object-cover 2xl:tw-h-80" 
+                            className="tw-w-full tw-h-[170px] tw-rounded-2xl tw-object-cover min-[2000px]:tw-h-80" 
                             src={urlFor(about.imgUrl)} 
                             alt={about.title} 
                          />

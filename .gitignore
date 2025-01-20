@@ -35,3 +35,6 @@ frontend_react/src/assets/
 
 # Ignore the .env file
 .env
+
+# Ignore build folder.
+frontend_react/build/
