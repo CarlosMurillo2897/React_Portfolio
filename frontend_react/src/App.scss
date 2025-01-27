@@ -53,21 +53,3 @@
       font-size: 0.9rem;
     }
   }
-  
-  .app__social {
-    a {
-  
-  
-      @media screen and (min-width: 2000px) {
-        width: 70px;
-        height: 70px;
-  
-        margin: 0.5rem 0;
-  
-        svg {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-  }
