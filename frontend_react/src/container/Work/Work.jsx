@@ -51,7 +51,7 @@ const Work = ()  => {
                 {filters.map((item, index) => (
                 <div
                     key={item + index}
-                    className={ `app__work-filter-item tw-py-2 2xl:tw-py-4 tw-px-4 2xl:tw-px-8 tw-rounded-lg 2xl:tw-rounded-xl tw-bg-white !tw-text-black tw-font-extrabold tw-cursor-pointer tw-m-2 hover:tw-bg-secondary hover:!tw-text-white app__flex p-text ${ filterClass(activeFilter, item) }`}
+                    className={ `app__work-filter-item tw-py-2 min-[2000px]:tw-py-4 tw-px-4 min-[2000px]:tw-px-8 tw-rounded-lg min-[2000px]:tw-rounded-[0.85rem] tw-bg-white !tw-text-black tw-font-extrabold tw-cursor-pointer tw-m-2 hover:tw-bg-secondary hover:!tw-text-white app__flex p-text ${ filterClass(activeFilter, item) }`}
                     onClick={ () => handleWorkFilter(item) }
                 >
                     { item }
@@ -67,11 +67,12 @@ const Work = ()  => {
                 {/* TODO: Create Carrousel or slider to display several works. */}
                 {filterWork.map((work, index) => 
                     <div 
-                        className="app__work-item app__flex tw-w-[270px] tw-flex-col tw-m-8 tw-p-4 tw-rounded-lg tw-bg-white tw-text-black tw-cursor-pointer hover:tw-shadow-[0_0_25px_rgba(0,0,0,0.2)] 2xl:tw-w-[470px] 2xl:tw-p-5 2xl:tw-rounded-xl max-sm:tw-w-full max-sm:tw-m-4" 
+                        className="app__work-item app__flex tw-w-[270px] tw-flex-col tw-m-8 tw-p-4 tw-rounded-lg tw-bg-white tw-text-black tw-cursor-pointer hover:tw-shadow-[0_0_25px_rgba(0,0,0,0.2)] min-[2000px]:tw-w-[470px] min-[2000px]:tw-p-5 min-[2000px]:tw-rounded-xl max-[300px]:tw-m-4" 
                         key={index}
                     >
-                        <div className="app__work-img app__flex tw-w-full tw-h-[230px] 2xl:tw-h-[350px] tw-relative">
+                        <div className="app__work-img app__flex tw-w-full tw-h-[230px] min-[2000px]:tw-h-[350px] tw-relative">
                             <img className="tw-w-full tw-h-full tw-rounded-lg tw-object-cover" src={ urlFor(work.imgUrl)} alt={work.name} />
+                            {/* TODO: Hover it's failing. */}
                             <motion.div
                                 whileHover={ { opacity: [0, 1] } }
                                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
@@ -99,7 +100,7 @@ const Work = ()  => {
                         </div>
 
                         <div className="app__work-content app__flex tw-p-2 tw-w-full tw-relative tw-flex-col">
-                            <h4 className="bold-text tw-mt-4 tw-text-base">{work.title}</h4>
+                            <h4 className="bold-text tw-mt-4 min-[2000px]:tw-mt-12 tw-text-base">{work.title}</h4>
                             <p className="p-text tw-mt-2.5">{work.description}</p>
 
                             <div className="app__work-tag app__flex tw-absolute tw-py-2 tw-px-4 tw-rounded-[10px] tw-bg-white tw-top-[-25px]">

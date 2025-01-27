@@ -7,7 +7,8 @@ import experiences from "./experiences";
 import testimonials from "./testimonials";
 import workExperience from "./workExperience";
 import socialMedia from "./socialMedia";
+import hyperlinks from "./hyperlinks";
 
 export const schemaTypes = [
-    works, testimonials, brands, abouts, skills, workExperience, experiences, contact, socialMedia
+    works, testimonials, brands, abouts, skills, workExperience, experiences, contact, socialMedia, hyperlinks
 ];

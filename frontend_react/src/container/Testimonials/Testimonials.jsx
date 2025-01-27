@@ -37,7 +37,7 @@ const Testimonials = ()  => {
                     <p className="p-text !tw-text-xl !tw-text-black min-[2000px]:!tw-text-[2rem]">{current.feedback}</p>
                     <div>
                         {/* TODO: Review classes defined in App.scss file, important it's required in some cases. */}
-                        <h4 className="bold-text !tw-font-semibold !tw-text-secondary tw-mt-8">{current.name}</h4>
+                        <a className="bold-text !tw-font-semibold !tw-text-secondary tw-mt-8" href={current.hyperlink}>{current.name}</a>
                         <h5 className="p-text tw-font-normal !tw-text-gray tw-mt-[5px]">{current.company}</h5>
                     </div>
                 </div>

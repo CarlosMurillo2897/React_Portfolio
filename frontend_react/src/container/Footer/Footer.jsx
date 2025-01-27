@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
-import { images } from '../../constants';
+import React, { useEffect, useState } from 'react';
+
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '../../client';
+import { client, urlFor } from '../../client';
 import './Footer.scss';
 
 const Footer = ()  => {
+    const [hyperlinks, setHyperlinks] = useState([]);
+
+    useEffect(() => {
+        const query = '*[_type == "hyperlinks"]';
+
+        client.fetch(query).then(data => {
+        setHyperlinks(data);
+        });
+    }, []);
+
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -37,12 +47,18 @@ const Footer = ()  => {
         <>
         <h2 className="head-text">Take a coffee & chat with me</h2>
         <div className="app__footer-cards tw-w-3/5 max-[768px]:tw-w-full tw-flex tw-justify-evenly tw-items-center tw-flex-wrap-reverse tw-mt-16 tw-mb-8 tw-mx-8">
-            <div className="app__footer-card tw-min-w-[290px] max-[450px]:tw-w-full tw-flex tw-flex-row tw-justify-start tw-items-center tw-my-4 tw-mx-0 tw-p-4 tw-rounded-[10px] tw-bg-[#fef4f5] tw-cursor-pointer">
-                <img src={images.email} alt="email" className="tw-w-10 tw-h-10 tw-my-0 tw-mx-3" />
-                <a href="mailto:cmb2897@gmail.com" className="p-text tw-font-medium">cmb2897@gmail.com</a>
-            </div>
+            {hyperlinks.map(item => (
+            <a 
+                className="app__footer-card tw-min-w-[290px] max-[375px]:tw-min-w-full max-[450px]:tw-w-full tw-flex tw-flex-row max-[300px]:tw-flex-col tw-justify-start tw-items-center tw-my-4 tw-mx-0 tw-p-4 tw-rounded-[10px] tw-bg-[#fef4f5] tw-cursor-pointer"
+                href={item.href}
+            >
+                <img src={ urlFor(item.imgUrl) } alt={ item.title } className="tw-w-10 tw-h-10 tw-my-0 tw-mx-3" />
+                <span className="p-text tw-font-medium">{ item.content }</span>
+            </a>)
+            )}
         </div>
         { !isFormSubmitted ? 
+        // TODO: Add form validation.
         <div className="app__footer-form app__flex tw-w-3/5 tw-flex-col tw-my-4 tw-mx-8 max-[768px]:tw-w-full max-[768px]:tw-my-4">
             <div className="app__flex">
                 <input type="text" className="p-text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
