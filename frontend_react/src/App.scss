@@ -1,5 +1,4 @@
 .app {
-    // TODO: Move into TW config.
     font-family: var(--font-base);
   }
   
@@ -57,34 +56,7 @@
   
   .app__social {
     a {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      @apply tw-bg-white;
-      margin: 0.25rem 0;
-      border: 1px solid;
-      @apply tw-border-light-gray;
   
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      transition: all 0.3s ease-in-out;
-  
-      svg {
-        width: 15px;
-        height: 15px;
-        @apply tw-text-gray;
-      }
-  
-      &:hover {
-        @apply tw-bg-secondary;
-        @apply tw-border-secondary;
-  
-        svg {
-          @apply tw-text-white;
-        }
-      }
   
       @media screen and (min-width: 2000px) {
         width: 70px;

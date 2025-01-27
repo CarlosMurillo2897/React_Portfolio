@@ -72,8 +72,8 @@ const Work = ()  => {
                     >
                         <div className="app__work-img app__flex tw-w-full tw-h-[230px] min-[2000px]:tw-h-[350px] tw-relative">
                             <img className="tw-w-full tw-h-full tw-rounded-lg tw-object-cover" src={ urlFor(work.imgUrl)} alt={work.name} />
-                            {/* TODO: Hover it's failing. */}
                             <motion.div
+                                initial={{ opacity: 0 }}
                                 whileHover={ { opacity: [0, 1] } }
                                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                                 className="app__work-hover app__flex tw-absolute tw-top-0 tw-left-0 tw-bottom-0 tw-right-0 tw-w-full tw-h-full tw-bg-[rgba(0,0,0,0.5)] tw-rounded-lg tw-opacity-0"
