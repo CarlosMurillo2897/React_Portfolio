@@ -11,8 +11,8 @@ const NavigationDots = ({ active }) => {
                 <a href={`#${item}`} 
                     key={item + index}
                     className={ `app__navigation-dot tw-w-2.5 min-[2000px]:tw-w-5 tw-h-2.5 min-[2000px]:tw-h-5 tw-rounded-full tw-m-2 tw-transition-colors tw-duration-200 tw-ease-in-out
-                      hover:tw-bg-secondary ${ navigationDotClass(active, item) }
-                    ` }
+                      hover:tw-bg-secondary ${ navigationDotClass(active, item) } ` }
+                    aria-label={`Link ${item}`}
                 />
         ))}
     </div>
