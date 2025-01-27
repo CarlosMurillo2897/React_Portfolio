@@ -34,7 +34,7 @@ const Testimonials = ()  => {
             <div className="app__testimonial-item app__flex tw-w-3/5 max-[850px]:tw-w-full tw-min-h-80 min-[2000px]:tw-min-h-[450px] tw-bg-white tw-flex tw-flex-row max-[600px]:tw-flex-col tw-p-8 tw-rounded-[15px]">
                 <img src={urlFor(current.imgUrl)} alt="testimonials" className="tw-w-[100px] tw-h-[100px] tw-rounded-[50%] tw-object-cover min-[2000px]:tw-w-[150px] min-[2000px]:tw-h-[150px]" />
                 <div className="app__testimonial-content tw-flex-1 tw-h-full tw-py-0 tw-px-8 tw-text-left tw-flex tw-flex-col tw-justify-around tw-items-start max-[600px]:tw-mt-8 max-[600px]:tw-p-0">
-                    <p className="p-text !tw-text-xl !tw-text-black min-[2000px]:!tw-text-[2rem]">{current.feedback}</p>
+                    <p className="p-text !tw-text-xl/[2rem] !tw-text-black min-[2000px]:!tw-text-[2rem]/[3.5rem]">{current.feedback}</p>
                     <div>
                         {/* TODO: Review classes defined in App.scss file, important it's required in some cases. */}
                         <a className="bold-text !tw-font-semibold !tw-text-secondary tw-mt-8" href={current.hyperlink}>{current.name}</a>
@@ -59,7 +59,7 @@ const Testimonials = ()  => {
                         whileInView={{ opacity: [0,1 ] }}
                         transition={{ duration: 0.5, type: 'tween' }}
                         key={brand._id}
-                        className="tw-w-[150px] max-[450px]:tw-w-[120px] min-[2000px]:tw-w-[210px] tw-m-6 max-[450px]:tw-m-4 min-[2000px]:tw-m-8 tw-group/item "
+                        className="tw-w-[150px] max-[450px]:tw-w-[120px] min-[2000px]:tw-w-[210px] tw-m-6 max-[450px]:tw-m-4 min-[2000px]:tw-m-8 tw-group/item"
                     >
                         <img src={urlFor(brand.imgUrl)} alt={brand.name} className="tw-w-full tw-h-auto tw-object-cover tw-grayscale group-hover/item:tw-grayscale-0" />
                     </motion.div>

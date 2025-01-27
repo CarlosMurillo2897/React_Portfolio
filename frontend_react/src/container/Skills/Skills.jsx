@@ -28,31 +28,31 @@ const Skills = ()  => {
     return (
         <>
             <h2 className="head-text">Skills & Experience</h2>
-            <div className="app__skills-container tw-w-4/5 tw-mt-12 tw-flex tw-flex-row max-md:tw-w-full max-md:tw-flex-col">
-                <motion.div className="app__skills-list tw-flex-1 tw-flex tw-flex-wrap tw-content-start tw-items-start tw-mr-20 max-md:tw-mr-0 max-md:tw-content-center max-md:tw-items-center">
+            <div className="app__skills-container tw-w-4/5 tw-mt-12 tw-flex tw-flex-row max-[900px]:tw-w-full max-[900px]:tw-flex-col">
+                <motion.div className="app__skills-list tw-flex-1 tw-flex tw-flex-wrap tw-content-start tw-items-start tw-mr-20 max-[900px]:tw-mr-0 max-[900px]:tw-content-center max-[900px]:tw-items-center">
                     {skills?.map(skill => (
                         <motion.div
                             whileInView={{ opacity: [0, 1] }}
                             transition={{ duration: 0.5 }}
-                            className="app__skills-item app__flex tw-flex-col tw-text-center tw-m-4 2xl:tw-my-4 2xl:tw-mx-8"
+                            className="app__skills-item app__flex tw-flex-col tw-text-center tw-m-4 min-[2000px]:tw-my-4 min-[2000px]:tw-mx-8"
                             key={skill.name}
                         >
-                            <div className={`app__flex tw-w-[70px] sm:tw-w-[90px] 2xl:tw-w-[150px] tw-h-[70px] sm:tw-h-[90px] 2xl:tw-h-[150px] tw-rounded-full tw-bg-primary ${applyBgColor(skill.bgColor)}`}>
+                            <div className={`app__flex max-[450px]:tw-w-[70px] tw-w-[90px] min-[2000px]:tw-w-[150px] max-[450px]:tw-h-[70px] tw-h-[90px] min-[2000px]:tw-h-[150px] tw-rounded-full tw-bg-primary ${applyBgColor(skill.bgColor)}`}>
                                 {/* TODO: Replace images with Icons. */}
                                 <img src={urlFor(skill.icon).url()} alt={skill.name} className="tw-w-3/6 tw-h-3/6" />
                             </div>
-                            <p className="p-text tw-font-medium tw-mt-2 2xl:tw-mt-4">{skill.name}</p>
+                            <p className="p-text tw-font-medium tw-mt-2 min-[2000px]:tw-mt-4">{skill.name}</p>
                         </motion.div>
                     ))}
                 </motion.div>
-                <motion.div className="app__skills-exp tw-flex-1 tw-flex tw-justify-start tw-items-start tw-flex-col max-md:tw-mt-8">
+                <motion.div className="app__skills-exp tw-flex-1 tw-flex tw-justify-start tw-items-start tw-flex-col max-[900px]:tw-mt-8">
                     {experience?.map((experience) => (
                         <motion.div 
                         className="app__skills-exp-item tw-w-full tw-flex tw-flex-row tw-justify-start tw-items-start tw-my-4 tw-mx-0"
                         key={experience.year}
                         >
-                            <div className="app__skills-exp-year tw-mr-12">
-                                <p className="bold-text tw-font-extrabold !tw-text-secondary max-sm:tw-mr-4">{experience.year}</p>
+                            <div className="app__skills-exp-year tw-mr-12 max-[450px]:tw-mr-4">
+                                <p className="bold-text tw-font-extrabold !tw-text-secondary">{experience.year}</p>
                             </div>
                             <motion.div className="app__skills-exp-works tw-flex-1">
                                 {experience.works?.map((work) => (
@@ -75,7 +75,7 @@ const Skills = ()  => {
                                             border={ '5px' }
                                             opacity={ 1 }
                                             arrowColor="#fff"
-                                            className="skills-tooltip !tw-bg-white !tw-text-gray 2xl:!tw-text-[1.75rem] 2xl:!tw-max-w-[500px]"
+                                            className="skills-tooltip !tw-bg-white !tw-text-gray min-[2000px]:!tw-text-[1.75rem]/[2rem] min-[2000px]:!tw-max-w-[500px]"
                                         >
                                             {work.desc}
                                         </Tooltip>
