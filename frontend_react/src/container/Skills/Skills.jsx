@@ -5,6 +5,7 @@ import { Tooltip } from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
+import { BsQuestionCircle } from 'react-icons/bs';
 
 const applyBgColor = bgColor => bgColor === undefined ? '' : `!tw-bg-[${bgColor}]`;
 
@@ -15,7 +16,7 @@ const Skills = ()  => {
 
     useEffect(() => {
           const query = '*[_type == "experiences"]';
-          const skillsQuery = '*[_type == "skills"]';
+          const skillsQuery = '*[_type == "skills"] | order(priority desc)';
 
           client.fetch(query).then(data => {
             setExperience(data);
@@ -64,10 +65,12 @@ const Skills = ()  => {
                                             data-tooltip-id={work.name}
                                             key={work.name}
                                         >
-                                            <h4 className="bold-text tw-font-medium">{work.name}</h4>
+                                            <h4 className="bold-text tw-font-medium tw-flex tw-flex-row tw-items-center">
+                                                {work.name}
+                                                <BsQuestionCircle className="tw-ms-2 tw-text-xs tw-rounded-full" />
+                                            </h4>
                                             <p className="p-text tw-font-normal tw-text-gray tw-mt-[5px]">{work.company}</p>
                                         </motion.div>
-                                        {/* TODO: Display Tooltip by using a circle interrogation mark icon. */}
                                         <Tooltip
                                             id={work.name}
                                             effect="solid"

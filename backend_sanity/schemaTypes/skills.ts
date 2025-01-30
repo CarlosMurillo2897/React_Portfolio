@@ -14,6 +14,11 @@ export default{
             type:'string'
         },
         {
+            name:'priority',
+            title:'Priority',
+            type:'number',
+        },
+        {
             name:'icon',
             title:'Icon',
             type: 'image',

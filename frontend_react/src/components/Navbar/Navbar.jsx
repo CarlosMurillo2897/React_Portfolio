@@ -15,16 +15,15 @@ const Navbar = ()  => {
       };
 
     return (
-        <nav className="app__navbar tw-w-full tw-flex tw-justify-between tw-items-center tw-py-4 tw-px-8 tw-backdrop-blur-sm tw-fixed tw-z-10">
+        <nav className="app__navbar tw-w-full tw-flex tw-justify-between tw-items-center tw-px-8 tw-backdrop-blur-sm tw-fixed tw-z-10">
             <div className="tw-flex tw-justify-start tw-items-center">
-                <img className="tw-w-[90px] tw-h-[20px] min-[2000px]:tw-w-[180px] min-[2000px]:tw-h-[40px]" src={images.logo} alt="logo" />
+                <img className="tw-w-[100px] min-[2000px]:tw-w-[180px]" src={images.logo} alt="logo" />
             </div>
             <ul className="app__navbar-links tw-flex-1 tw-justify-center tw-items-center tw-flex max-[900px]:tw-hidden">
                 {
                 links.map((item) => (
                     <li key={`link-${item}`} className="app__flex p-text tw-mx-4 tw-cursor-pointer tw-flex-col">
                         <div className="tw-w-[5px] tw-h-[5px] tw-bg-transparent tw-rounded-full tw-mb-[5px] hover:tw-bg-secondary" />
-                        {/* Get color change after 0.3s. */}
                         <a href={`#${item}`} className="tw-no-underline tw-flex-col tw-uppercase tw-font-medium tw-text-gray hover:tw-text-secondary tw-transition-all tw-duration-300">{item}</a>
                     </li>
                 ))}
