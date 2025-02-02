@@ -64,6 +64,7 @@ const Work = ()  => {
                 transition={{ duration: 0.5, delayChildren: 0.5 }}
                 className="app__work-portfolio tw-flex tw-flex-wrap tw-justify-center tw-items-center"
             >
+                {/* TODO: Add Github API using urls, readmes and url. */}
                 {/* TODO: Create Carrousel or slider to display several works. */}
                 {filterWork.map((work, index) => 
                     <div 
